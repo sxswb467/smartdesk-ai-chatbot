@@ -4,5 +4,7 @@ dist
 build
 coverage
 .env
+.codex-tmp/
+*.tsbuildinfo
 apps/server/data/*.json
 !apps/server/data/.gitkeep
