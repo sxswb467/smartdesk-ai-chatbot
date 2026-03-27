@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log*
+dist
+build
+coverage
+.env
+apps/server/data/*.json
+!apps/server/data/.gitkeep

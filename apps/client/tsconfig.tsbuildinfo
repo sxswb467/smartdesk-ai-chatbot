@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/api.ts","./src/formatters.ts","./src/main.tsx","./src/promptSuggestions.ts","./src/types.ts","./src/vite-env.d.ts","./src/components/ChatWorkspace.tsx","./src/components/ConversationRail.tsx","./src/components/SettingsPanel.tsx"],"version":"5.9.3"}
