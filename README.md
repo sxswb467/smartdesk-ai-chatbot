@@ -40,13 +40,12 @@ This type of system is useful for:
 
 The workspace follows a typical AI application flow:
 
-Frontend (React)
-  ↓
-API layer (Express + TypeScript)
-  ↓
-Processing layer (conversation management, streaming replies, preset logic, AI provider integration)
-  ↓
-Storage (JSON file persistence)
+```mermaid
+flowchart TD
+    A["Frontend (React)"] --> B["API layer (Express + TypeScript)"]
+    B --> C["Processing layer (conversation management, streaming replies, preset logic, AI provider integration)"]
+    C --> D["Storage (JSON file persistence)"]
+```
 
 Real-time updates via:
 
