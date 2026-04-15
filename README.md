@@ -18,6 +18,15 @@ This type of system is commonly used for:
 - Knowledge-enabled AI workspaces
 - Department-specific chat tools inside SaaS products
 
+## Why this matters
+
+This type of system is useful for:
+
+- Teams that need AI-assisted workflow automation inside everyday tools
+- SaaS products offering role-based copilots for support, sales, or operations
+- Internal knowledge systems that benefit from conversational access
+- Organizations that want a reusable chat workspace instead of isolated demos
+
 ## Key capabilities
 
 - Multi-conversation workspace with saved threads
@@ -26,6 +35,22 @@ This type of system is commonly used for:
 - Editable system prompt and reusable knowledge snippets
 - File-backed persistence for frictionless local development
 - Local-first setup with separate client and server apps
+
+## Implementation layout
+
+The workspace follows a typical AI application flow:
+
+Frontend (React)
+  ↓
+API layer (Express + TypeScript)
+  ↓
+Processing layer (conversation management, streaming replies, preset logic, AI provider integration)
+  ↓
+Storage (JSON file persistence)
+
+Real-time updates via:
+
+- Streaming assistant responses from the server to the client
 
 ## Screenshots
 
