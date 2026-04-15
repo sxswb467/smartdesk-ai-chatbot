@@ -1,13 +1,27 @@
 # SmartDesk AI Chatbot
 
-SmartDesk AI Chatbot is a full-stack demo application that packages a polished React workspace together with an Express and TypeScript API for conversation management, streaming replies, preset-based prompting, and editable knowledge snippets.
+SmartDesk AI Chatbot is a production-style AI workspace designed to show how a team-facing chat assistant can be structured beyond a simple prompt box. It combines multi-conversation management, streaming responses, editable prompting controls, and reusable knowledge snippets in a full-stack product experience.
 
-The project is designed to be easy to run locally in WSL, easy to review, and easy to extend into a more production-oriented AI workspace.
+## What this project demonstrates
 
-## Main features
+- AI chat workflows shaped for real team use, not just one-off prompting
+- Streaming response handling in a polished client-server application
+- Configurable assistant behavior through presets, prompts, and knowledge controls
+- Full-stack architecture that supports both mock demos and live OpenAI-backed responses
+
+## Use case
+
+This type of system is commonly used for:
+
+- Internal team copilots
+- Support, sales, and operations assistants
+- Knowledge-enabled AI workspaces
+- Department-specific chat tools inside SaaS products
+
+## Key capabilities
 
 - Multi-conversation workspace with saved threads
-- Streaming assistant replies with mock and live OpenAI modes
+- Streaming assistant replies with mock and live AI modes
 - Preset-specific chat flows for support, sales, product, and engineering
 - Editable system prompt and reusable knowledge snippets
 - File-backed persistence for frictionless local development
@@ -31,24 +45,11 @@ The project is designed to be easy to run locally in WSL, easy to review, and ea
 
 ### Client
 
-The frontend lives in `apps/client` and uses React, TypeScript, and Vite. The UI is split into focused modules:
-
-- `App.tsx`: state orchestration and API integration
-- `components/ConversationRail.tsx`: brand, quick-start presets, and saved threads
-- `components/ChatWorkspace.tsx`: active transcript, prompt suggestions, and composer
-- `components/SettingsPanel.tsx`: provider, prompt, and knowledge controls
-- `api.ts`: typed browser API wrapper
+The frontend lives in `apps/client` and uses React, TypeScript, and Vite to power the conversation workspace, composer, prompt suggestions, and control panels.
 
 ### Server
 
-The backend lives in `apps/server` and uses Express with small service modules:
-
-- `routes.ts`: HTTP endpoints and request validation
-- `services/conversationService.ts`: conversation CRUD and message persistence
-- `services/settingsService.ts`: AI settings updates
-- `services/mockAiService.ts`: local mock streaming responses
-- `services/openAiService.ts`: optional OpenAI Responses API integration
-- `storage.ts`: local JSON database bootstrap and persistence
+The backend lives in `apps/server` and uses Express with small service modules for conversation persistence, settings management, mock streaming, and optional OpenAI integration.
 
 ## Tech stack
 
@@ -68,34 +69,6 @@ The backend lives in `apps/server` and uses Express with small service modules:
 - OpenAI Node SDK
 - Zod
 - UUID
-
-## Repository structure
-
-```text
-smartdesk-ai-chatbot/
-  apps/
-    client/
-      src/
-        components/
-        api.ts
-        App.tsx
-        formatters.ts
-        promptSuggestions.ts
-        styles.css
-    server/
-      src/
-        services/
-        config.ts
-        index.ts
-        presets.ts
-        routes.ts
-        storage.ts
-      data/
-  docs/
-    screenshots/
-  package.json
-  README.md
-```
 
 ## Dependency requirements
 
@@ -185,7 +158,7 @@ There is currently no dedicated automated test suite. For now, validation is don
 
 - `npm run lint`
 - `npm run build`
-- manual verification of the local chat flow in the browser
+- Manual verification of the local chat flow in the browser
 
 ## Configuration notes
 
